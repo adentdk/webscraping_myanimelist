@@ -1,0 +1,27 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env", {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "module-resolver", {
+        "root": ["./src"],
+        "alias": {
+          "@src": "./src",
+          "@models": "./src/db/models",
+          "@storage": "./src/storage",
+          "@middlewares": "./src/middlewares",
+          "@utils": "./src/utils",
+          "@transformer": "./src/transformer",
+          "@controllers-v1": "./src/http/v1/controllers"
+        }
+      }
+    ]
+  ]
+}

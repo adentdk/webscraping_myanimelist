@@ -1,0 +1,14 @@
+version: '3'
+
+services: 
+  api-express:
+    container_name: ${PROJECT}.api-express
+    image: ${PROJECT}.api-express:dev-${TAG}
+    restart: ${SERVICES_RESTART_TYPE}
+    env_file: 
+      - .env
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 8083:3000
