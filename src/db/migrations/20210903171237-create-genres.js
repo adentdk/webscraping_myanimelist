@@ -19,6 +19,12 @@ module.exports = {
       name: Sequelize.STRING,
       slug: Sequelize.STRING,
     });
+
+    await queryInterface.addConstraint('genres', {
+      fields:  ['slug'],
+      type: 'unique',
+      name: 'gendre_slug_unique'
+    });
   },
 
   down: async (queryInterface, Sequelize) => {
@@ -28,6 +34,7 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
+    await queryInterface.removeConstraint('genres', 'gendre_slug_unique');
     await queryInterface.dropTable('genres');
   }
 };
