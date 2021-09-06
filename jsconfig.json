@@ -3,12 +3,6 @@
     "baseUrl": ".",
     "paths": {
       "@src/*": ["./src/*"],
-      "@models/*": ["./src/db/models/*"],
-      "@storage/*": ["./src/storage/*"],
-      "@middlewares/*": ["src/http/middlewares/*"],
-      "@utils/*": ["./src/utils/*"],
-      "@transformer/*": ["./src/transformer/*"],
-      "@controllers-v1/*": ["./src/http/v1/controllers/*"]
     },
     "esModuleInterop": true
   },
